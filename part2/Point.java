@@ -21,9 +21,14 @@ class Point
    }
 
    public double getAngle() {
-      return Math.atan(this.y / this.x);
+      double out = 0;
+      if (x >= 0) {
+         return Math.atan(this.y / this.x);
+      }
+      else {
+         return Math.atan(this.y / this.x) - Math.PI;
+      }
    }
-
    public Point rotate90() {
       return new Point(-1 * this.y, this.x);
    }

@@ -45,6 +45,18 @@ public class TestCases
    }
 
    @Test
+   public void testGetRadius3()
+   {
+      assertEquals(0, new Point(0.0, 0.0).getRadius(), DELTA);
+   }
+
+   @Test
+   public void testGetRadius4()
+   {
+      assertEquals(10, new Point(-6.0, -8.0).getRadius(), DELTA);
+   }
+
+   @Test
    public void testGetAngle1()
    {
       assertEquals(Math.PI / 2.0, new Point(0.0, 1.0).getAngle(), DELTA);
@@ -54,6 +66,12 @@ public class TestCases
    public void testGetAngle2()
    {
       assertEquals((-1 * Math.PI) / 2.0, new Point(0.0, -1.0).getAngle(), DELTA);
+   }
+   
+   @Test
+   public void testGetAngle3()
+   {
+      assertEquals(-1 * ((3*Math.PI)/4.0), new Point(-1.0, -1.0).getAngle(), DELTA);
    }
 
    @Test
